@@ -1,0 +1,7 @@
+{
+  "name": "bs-chalk",
+  "bsc-flags": ["-bs-super-errors"],
+  "bs-dev-dependencies": ["bs-jest"],
+  "refmt": 3,
+  "sources": [{ "dir": "src" }, { "dir": "__tests__", "type": "dev" }]
+}
