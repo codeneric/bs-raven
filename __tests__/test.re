@@ -1,3 +1,7 @@
-let y = Raven.makeConfig(~level=`debug, ~tags=Js.Dict.fromList([("abce", "def")]), ());
+open Jest;
 
-Raven.config(~dsn="dns", ());
+open Expect;
+
+test("Raven make empty config", () => expect(Raven.makeConfig()) |> toMatchSnapshot);
+
+test("Raven make config", () => expect(Raven.makeConfig(~level=`info, ())) |> toMatchSnapshot);
